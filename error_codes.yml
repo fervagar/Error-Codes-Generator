@@ -1,0 +1,31 @@
+# This YAML file configures modules, their errors, and submodules with their own errors.
+
+# Define modules with unique keys
+modules:
+  # TestMod1 is a module identifier
+  TestMod1:
+    # List of errors associated with TestMod1
+    errors:
+      E_OPEN_DEV: "Error opening device"
+      E_CLOSE_DEV: "Error closing device"
+    # Submodules under TestMod1
+    submodules:
+      # Submodule named TestMod1SubMod1 under TestMod1
+      TestMod1SubMod1:
+        # Errors specific to the submodule TestMod1SubMod1
+        errors:
+          E_READ_DEV: "Error reading from device"
+          E_WRITE_DEV: "Error writing to device"
+  # TestMod2 is another module
+  TestMod2:
+    # Errors for TestMod2
+    errors:
+      E_INIT_MOD: "Error initializing module"
+    # Submodules under TestMod2
+    submodules:
+      # Submodule named TestMod2SubMod1 under TestMod2
+      TestMod2SubMod1:
+        # Errors specific to TestMod2SubMod1
+        errors:
+          E_CONFIG_FAIL: "Configuration failure"
+
